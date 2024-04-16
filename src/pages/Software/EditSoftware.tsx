@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 import { routes } from "../../constants";
 import Input from "../../components/Ui/Input/Input";
 import { IoAccessibility } from "react-icons/io5";
+import NewImage from "../../components/Ui/ImageInput/ImageInput";
+import { useFormik } from "formik";
 
 const EditSoftware = () => {
   const [loading] = useState(false);
@@ -13,6 +15,15 @@ const EditSoftware = () => {
     { text: t("breadcrumbs.software"), link: routes.SOFTWARE },
     { text: t("breadcrumbs.editSoftware") },
   ];
+
+  const formik = useFormik({
+    initialValues: {
+      image: "",
+    },
+    enableReinitialize: true,
+    // validationSchema: loginValidationSchema(t),
+    onSubmit: async () => {},
+  });
   return (
     <div className="pageStyle">
       <Container fluid>
@@ -62,7 +73,7 @@ const EditSoftware = () => {
                     }
                   />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12}>
                   <InfoCard
                     heading="Description"
                     info={
@@ -72,6 +83,12 @@ const EditSoftware = () => {
                         placeholder="Description"
                       />
                     }
+                  />
+                </Col>
+                <Col xs={12}>
+                  <InfoCard
+                    heading="Icon"
+                    info={<NewImage formik={formik} name="image" />}
                   />
                 </Col>
               </Row>
@@ -85,18 +102,18 @@ const EditSoftware = () => {
                 <h6>Key Features</h6>
                 <Col xs={12} md={4}>
                   <Stack direction="vertical">
-                    <Stack direction="horizontal" gap={3}>
+                    <Stack direction="vertical" gap={1}>
                       <Stack direction="vertical">
                         <label style={{ fontSize: "13px" }}>Feature Name</label>
                         <Input name="name" type="string" />
                       </Stack>
                       <Stack
                         direction="vertical"
-                        gap={4}
-                        className="align-items-center"
+                        gap={1}
+                        className="align-items-start"
                       >
                         <label style={{ fontSize: "13px" }}>Feature Icon</label>
-                        <IoAccessibility />
+                        <NewImage formik={formik} name="image" />
                       </Stack>
                     </Stack>
                     <Stack direction="vertical">
@@ -104,23 +121,31 @@ const EditSoftware = () => {
                         Features Description
                       </label>
                       <Input name="desc" type="string" />
+                    </Stack>
+                    <Stack
+                      direction="vertical"
+                      gap={1}
+                      className="align-items-start"
+                    >
+                      <label style={{ fontSize: "13px" }}>Feature Icon</label>
+                      <NewImage formik={formik} name="image" />
                     </Stack>
                   </Stack>
                 </Col>
-                <Col xs={12} md={4}>
+                <Col xs={12} md={6}>
                   <Stack direction="vertical">
-                    <Stack direction="horizontal" gap={3}>
+                    <Stack direction="vertical" gap={1}>
                       <Stack direction="vertical">
                         <label style={{ fontSize: "13px" }}>Feature Name</label>
                         <Input name="name" type="string" />
                       </Stack>
                       <Stack
                         direction="vertical"
-                        gap={4}
-                        className="align-items-center"
+                        gap={1}
+                        className="align-items-start"
                       >
                         <label style={{ fontSize: "13px" }}>Feature Icon</label>
-                        <IoAccessibility />
+                        <NewImage formik={formik} name="image" />
                       </Stack>
                     </Stack>
                     <Stack direction="vertical">
@@ -129,29 +154,13 @@ const EditSoftware = () => {
                       </label>
                       <Input name="desc" type="string" />
                     </Stack>
-                  </Stack>
-                </Col>
-                <Col xs={12} md={4}>
-                  <Stack direction="vertical">
-                    <Stack direction="horizontal" gap={3}>
-                      <Stack direction="vertical">
-                        <label style={{ fontSize: "13px" }}>Feature Name</label>
-                        <Input name="name" type="string" />
-                      </Stack>
-                      <Stack
-                        direction="vertical"
-                        gap={4}
-                        className="align-items-center"
-                      >
-                        <label style={{ fontSize: "13px" }}>Feature Icon</label>
-                        <IoAccessibility />
-                      </Stack>
-                    </Stack>
-                    <Stack direction="vertical">
-                      <label style={{ fontSize: "13px" }}>
-                        Features Description
-                      </label>
-                      <Input name="desc" type="string" />
+                    <Stack
+                      direction="vertical"
+                      gap={1}
+                      className="align-items-start"
+                    >
+                      <label style={{ fontSize: "13px" }}>Feature Icon</label>
+                      <NewImage formik={formik} name="image" />
                     </Stack>
                   </Stack>
                 </Col>

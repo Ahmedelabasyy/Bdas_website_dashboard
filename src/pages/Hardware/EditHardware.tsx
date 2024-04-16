@@ -3,6 +3,8 @@ import { Col, Container, Row, Spinner, Stack } from "react-bootstrap";
 import { EasyAccess, InfoCard } from "../../components";
 import { useTranslation } from "react-i18next";
 import { routes } from "../../constants";
+import NewImage from "../../components/Ui/ImageInput/ImageInput";
+import { useFormik } from "formik";
 
 const EditHardware = () => {
   const [loading] = useState(false);
@@ -11,6 +13,15 @@ const EditHardware = () => {
     { text: t("breadcrumbs.hardware"), link: routes.HARDWARE },
     { text: t("breadcrumbs.editHardware") },
   ];
+
+  const formik = useFormik({
+    initialValues: {
+      image: "",
+    },
+    enableReinitialize: true,
+    // validationSchema: loginValidationSchema(t),
+    onSubmit: async () => {},
+  });
   return (
     <div className="pageStyle">
       <Container fluid>
@@ -60,7 +71,7 @@ const EditHardware = () => {
                     }
                   />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12}>
                   <InfoCard
                     heading="Description"
                     info={
@@ -70,6 +81,12 @@ const EditHardware = () => {
                         placeholder="Description"
                       />
                     }
+                  />
+                </Col>
+                <Col xs={12}>
+                  <InfoCard
+                    heading="Icon"
+                    info={<NewImage formik={formik} name="image" />}
                   />
                 </Col>
               </Row>

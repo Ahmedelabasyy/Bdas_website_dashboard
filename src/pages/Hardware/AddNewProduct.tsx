@@ -71,7 +71,7 @@ const AddNewProduct = () => {
                     }
                   />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12}>
                   <InfoCard
                     heading="Description"
                     info={
@@ -83,7 +83,7 @@ const AddNewProduct = () => {
                     }
                   />
                 </Col>
-                <Col xs={12} md={6}>
+                <Col xs={12}>
                   <InfoCard
                     heading="Icon"
                     info={<NewImage formik={formik} name="image" />}
