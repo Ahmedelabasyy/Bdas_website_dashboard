@@ -4,7 +4,6 @@ import { EasyAccess, InfoCard } from "../../components";
 import { useTranslation } from "react-i18next";
 import { routes } from "../../constants";
 import Input from "../../components/Ui/Input/Input";
-import { IoAccessibility } from "react-icons/io5";
 import NewImage from "../../components/Ui/ImageInput/ImageInput";
 import { useFormik } from "formik";
 
