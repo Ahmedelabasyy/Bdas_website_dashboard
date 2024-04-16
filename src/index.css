@@ -1,0 +1,16 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "/src/styles/_main.scss";
+@import "react-toastify/dist/ReactToastify.css";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pageStyle {
+  padding: 2rem 0;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  background-color: var(--bgColor);
+}

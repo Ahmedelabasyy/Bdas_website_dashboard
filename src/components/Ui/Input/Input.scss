@@ -1,0 +1,219 @@
+.input-container {
+  margin: 0.2rem;
+  position: relative;
+  flex-direction: column;
+
+  .input-custom {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 1px solid var(--secondary);
+    background-color: transparent;
+    border-radius: 8px;
+    width: 100%;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    &::placeholder {
+      color: var(--secondary);
+      opacity: 1;
+      margin: 0 1rem;
+    }
+  }
+
+  .input-checkbox {
+    width: 20px;
+    height: 20px;
+    appearance: none; // Removes default styling
+    border: 2px solid grey; // Custom border
+    border-radius: 4px; // Rounded corners
+    background-color: white;
+
+    &:checked {
+      background-color: var(
+        --primaryColor
+      ); // Change this to your desired color
+      // border-color: blue;
+      // You can also add a checkmark icon or similar here
+
+      &::after {
+        content: ""; // Required for a pseudo-element
+        position: absolute;
+        left: 7px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  // input[type="checkbox"] {
+  //   background-color: green !important;
+  //   color: white;
+  // }
+
+  label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.3em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: var(--secondary);
+    transform: translateY(-50%) scale(0.9);
+    background-color: #fff;
+  }
+
+  .label-error {
+    color: var(--error);
+  }
+
+  :is(input:focus) {
+    border-color: var(--darkPrimaryColor);
+  }
+
+  input:focus + label {
+    color: var(--darkPrimaryColor);
+  }
+
+  .input-error {
+    // border-color: var(--error);
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 1px solid var(--error);
+    background-color: transparent;
+    border-radius: 8px;
+    width: 100%;
+    padding-left: 22px;
+    padding-right: 22px;
+    // direction: rtl;
+  }
+
+  .icon {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    left: 3%;
+    top: 19%;
+    cursor: pointer;
+  }
+
+  .icon-password {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    // right: 3%;
+    top: 15%;
+    cursor: pointer;
+  }
+  .error {
+    text-align: start;
+    // font-size: var(--font-size-1);
+    padding: 0.3rem;
+    color: "red";
+
+    font-size: 14px;
+    height: 2rem;
+  }
+}
+
+input.num-left {
+  text-align: left !important;
+  // font-size: var(--font-size-5);
+  &::placeholder {
+    text-align: start !important;
+  }
+}
+
+input::-webkit-credentials-auto-fill-button {
+  //visibility: hidden;
+  opacity: 0;
+}
+
+input.placeholder-right::-webkit-input-placeholder {
+  text-align: start !important;
+}
+input.placeholder-center::-webkit-input-placeholder {
+  text-align: center !important;
+}
+
+input.padding-left {
+  padding-left: 3rem !important;
+}
+
+[dir="ltr"] {
+  .input-container {
+    .icon {
+      right: 3%;
+      // left: unset;
+    }
+
+    .icon-password {
+      right: 1% !important;
+      left: unset;
+    }
+  }
+}
+
+[dir="rtl"] {
+  .input-container {
+    label {
+      right: 0;
+      left: unset;
+    }
+
+    .icon-password {
+      left: 1% !important;
+      right: unset;
+    }
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  box-shadow: 0 0 0 30px white inset !important;
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  color: #fff;
+  position: relative;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field {
+  position: absolute !important;
+  // border-left: 1px solid #8c8c8c;
+  padding: 2px;
+  color: #000;
+  left: 56px;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field {
+  position: absolute !important;
+  // border-left: 1px solid #8c8c8c;
+  padding: 2px;
+  color: #000;
+  left: 26px;
+}
+
+input[type="date"]::-webkit-datetime-edit-day-field {
+  position: absolute !important;
+  color: #000;
+  padding: 2px;
+  left: 4px;
+}
+
+// input[type="checkbox"]:checked {
+//   background-color: var(--primary) !important;
+//   border: none !important;
+// }

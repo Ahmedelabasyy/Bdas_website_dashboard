@@ -1,0 +1,43 @@
+div.tableDiv {
+  background-color: var(--bgColor);
+}
+table {
+  min-width: 100%; /* Responsive width */
+
+  background-color: var(--darkPrimaryColor);
+  border-radius: 10px;
+  border-collapse: separate;
+  thead {
+    border-radius: 20px !important;
+    background-color: var(--darkPrimaryColor);
+    color: var(--white);
+    // background-image: url("/images/mask.svg");
+    background-repeat: no-repeat;
+    background-size: initial;
+    background-position: -19% 42%;
+    background-repeat: no-repeat;
+    th {
+      font-size: 13px;
+      font-weight: 700 !important;
+      padding: 0 15px;
+    }
+  }
+  tbody {
+    tr {
+      border-radius: 20px;
+      border-collapse: separate;
+      background-color: var(--white);
+      border-bottom: 20px solid var(--bgColor);
+      border-top: 20px solid var(--bgColor);
+      color: var(--praimary, #28334a);
+      font-family: Cairo;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px; /* 171.429% */
+      td {
+        padding: 10px;
+      }
+    }
+  }
+}
