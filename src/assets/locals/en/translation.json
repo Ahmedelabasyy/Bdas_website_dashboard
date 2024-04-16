@@ -434,14 +434,22 @@
     "hardware": "Hardware",
     "addHardware": "Add New Product",
     "editHardware": "Edit Hardware ",
-    "software": "Sofware",
+    "software": "Software",
     "editSoftware": "Edit sofware",
     "projects": "Projects",
+    "addProject": "Add Project",
     "editProjects": "Edit Projects",
     "customers": "Customers",
+    "editCustomer": "Edit Customer",
     "addNewCustomer": "Add New Customer",
     "partners": "Partners",
-    "addNewPartner": "Add New Partner"
+    "addNewPartner": "Add New Partner",
+    "editPartners": "Edit Partner",
+    "editHardwareHero": "Edit Hardware Hero",
+    "editSoftwareHero": "Edit Software Hero",
+    "editProjectsHero": "Edit Projects Hero",
+    "contactUS": "Contact Us",
+    "editContactUsHero": "Edit Contact Us Hero"
   },
 
   "image": {

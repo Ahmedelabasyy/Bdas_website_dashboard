@@ -1,7 +1,12 @@
 import { FC, useEffect, useMemo, useState } from "react";
 import { Col, Container, Row, Spinner, Stack } from "react-bootstrap";
 import { GoSearch } from "react-icons/go";
-import { ActionsMenu, SearchInput, TableComponent } from "../../components";
+import {
+  ActionsMenu,
+  Button,
+  SearchInput,
+  TableComponent,
+} from "../../components";
 import { useFetchTableData } from "../../hooks/useFetchTableData";
 import { useNavigate } from "react-router-dom";
 import { routes } from "../../constants";
@@ -122,6 +127,11 @@ const Software: FC = () => {
                   >
                     Hero Section
                   </h1>
+                  <Button
+                    onClick={() => navigate(`${routes.EDITSOFTWAREHERO}`)}
+                    style={{ width: "10rem" }}
+                    text="Edit"
+                  />
                 </Stack>
                 <Row className="justify-content-between">
                   <Col xs={12} md={5}>

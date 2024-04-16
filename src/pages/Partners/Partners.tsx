@@ -73,7 +73,7 @@ const Partners: FC = () => {
       Cell: ({ row }: any) => (
         <ActionsMenu
           onView={() => navigate(`${routes?.PARTNERS}/${row?.original?.id}`)}
-          onEdit={() => console.log("object")}
+          onEdit={() => navigate(`${routes?.EDITPARTNER}/${row?.original?.id}`)}
           onDelete={() => console.log("object")}
         />
       ),

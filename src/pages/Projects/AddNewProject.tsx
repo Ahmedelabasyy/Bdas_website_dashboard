@@ -7,12 +7,12 @@ import Input from "../../components/Ui/Input/Input";
 import NewImage from "../../components/Ui/ImageInput/ImageInput";
 import { useFormik } from "formik";
 
-const EditProjects = () => {
+const AddNewProject = () => {
   const [loading] = useState(false);
   const { t } = useTranslation();
   const breadcrumbItems = [
-    { text: t("breadcrumbs.projects"), link: routes.SOFTWARE },
-    { text: t("breadcrumbs.editProjects") },
+    { text: t("breadcrumbs.projects"), link: routes.PROJECTS },
+    { text: t("breadcrumbs.addProject") },
   ];
 
   const formik = useFormik({
@@ -302,4 +302,4 @@ const EditProjects = () => {
   );
 };
 
-export default EditProjects;
+export default AddNewProject;

@@ -131,7 +131,7 @@ const Hardware: FC = () => {
               >
                 <Stack
                   direction="horizontal"
-                  className="align-items-center justify-content-between"
+                  className="align-items-center justify-content-between mb-3"
                 >
                   <h1
                     className="mb-3 fw-bold"
@@ -139,6 +139,11 @@ const Hardware: FC = () => {
                   >
                     Hero Section
                   </h1>
+                  <Button
+                    onClick={() => navigate(`${routes.EDITHARDWAREHERO}`)}
+                    style={{ width: "10rem" }}
+                    text="Edit"
+                  />
                 </Stack>
                 <Row className="justify-content-between">
                   <Col xs={12} md={5}>

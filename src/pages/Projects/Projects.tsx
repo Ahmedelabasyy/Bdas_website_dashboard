@@ -97,7 +97,7 @@ const Projects: FC = () => {
             </Col>
             <Col md={12} lg={2}>
               <Button
-                // onClick={() => navigate(`${routes.ADDVISIT}`)}
+                onClick={() => navigate(`${routes.ADDNEWPROJECT}`)}
                 text="Add New Project"
                 type="button"
                 style={{
@@ -135,6 +135,11 @@ const Projects: FC = () => {
                   >
                     Hero Section
                   </h1>
+                  <Button
+                    onClick={() => navigate(`${routes.EDITPROJECTSHERO}`)}
+                    style={{ width: "10rem" }}
+                    text="Edit"
+                  />
                 </Stack>
                 <Row className="justify-content-between">
                   <Col xs={12} md={5}>

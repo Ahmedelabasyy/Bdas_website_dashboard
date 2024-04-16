@@ -73,7 +73,9 @@ const Customers: FC = () => {
       Cell: ({ row }: any) => (
         <ActionsMenu
           onView={() => navigate(`${routes?.CUSTOMERS}/${row?.original?.id}`)}
-          onEdit={() => console.log("object")}
+          onEdit={() =>
+            navigate(`${routes?.EDITCUSTOMER}/${row?.original?.id}`)
+          }
           onDelete={() => console.log("object")}
         />
       ),

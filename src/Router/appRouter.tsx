@@ -5,11 +5,18 @@ import {
   AddNewCustomer,
   AddNewPartner,
   AddNewProduct,
+  AddNewProject,
   ContactUs,
   Customers,
+  EditContactHero,
+  EditCustomer,
   EditHardware,
+  EditHardwareHero,
+  EditPartner,
   EditProjects,
+  EditProjectsHero,
   EditSoftware,
+  EditSoftwareHero,
   Hardware,
   Home,
   Partners,
@@ -44,30 +51,37 @@ const AppRouter: FC = () => {
           <Route path={routes.SOFTWARE}>
             <Route index element={<Software />} />
             <Route path="editsoftware/:id" element={<EditSoftware />} />
+            <Route path="editsoftwarehero" element={<EditSoftwareHero />} />
           </Route>
           <Route path={routes.HARDWARE}>
             <Route index element={<Hardware />} />
             <Route path="addnewhardware" element={<AddNewProduct />} />
             <Route path="edithardware/:id" element={<EditHardware />} />
+            <Route path="edithardwareHero" element={<EditHardwareHero />} />
           </Route>
           <Route path={routes.PARTNERS}>
             <Route index element={<Partners />} />
             <Route path=":id" element={<ViewPartner />} />
             <Route path="addnewpartner" element={<AddNewPartner />} />
+            <Route path="editpartner/:id" element={<EditPartner />} />
           </Route>
           <Route path={routes.CUSTOMERS}>
             <Route index element={<Customers />} />
             <Route path=":id" element={<ViewCustomer />} />
             <Route path="addnewcustomer" element={<AddNewCustomer />} />
+            <Route path="editcustomer/:id" element={<EditCustomer />} />
           </Route>
           <Route path={routes.PROJECTS}>
             <Route index element={<Projects />} />
             <Route path=":id" element={<ViewProject />} />
             <Route path="editprojects/:id" element={<EditProjects />} />
+            <Route path="editProjectsHero" element={<EditProjectsHero />} />
+            <Route path="addnewproject" element={<AddNewProject />} />
           </Route>
           <Route path={routes.CONTACTUS}>
             <Route index element={<ContactUs />} />
             <Route path=":id" element={<ViewContactus />} />
+            <Route path="editContactHero" element={<EditContactHero />} />
           </Route>
         </Route>
         {/* auth routes */}
