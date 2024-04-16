@@ -2,7 +2,6 @@ import { FC, useEffect, useState } from "react";
 import { Col, Container, Row, Spinner, Stack } from "react-bootstrap";
 import { InfoCard } from "../../components";
 import { FaUserFriends } from "react-icons/fa";
-import { FaListCheck } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
 import { AdminFormData } from "../../types/types";
 import { getOneAdmin } from "../../services";
